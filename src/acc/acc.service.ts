@@ -7,8 +7,14 @@ import { Acc, AccDocument } from '../schemas/acc.schema';
 
 @Injectable()
 export class AccService {
+  //injectoidaan pankkitilimalli
   constructor(@InjectModel(Acc.name) private readonly model: Model<AccDocument>) {}
 
+
+  /*
+  Alla olevat CRUD metodit olivat tutoriaalissa asynkronisia, mutta tätä työtä varten jätin ne osat pois
+  jotta koodi pysyisi yksinkertaisempana
+  */
   findAll() {
     return this.model.find();
   }

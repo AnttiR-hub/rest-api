@@ -3,6 +3,10 @@ import { Document } from 'mongoose';
 
 export type AccDocument = Acc & Document;
 
+/*
+Luodaan schema pankkitilejä varten. Joka tilillä pitää olla haltijan nimi ja tilin rahatilanne
+Omistetut osakkeet (stocks) on valinnainen ominaisuus tilillä.
+ */
 @Schema()
 export class Acc {
   @Prop({ required: true })

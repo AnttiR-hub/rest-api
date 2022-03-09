@@ -11,7 +11,7 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    //otetaan yhteys tietokantaan, joka sijaitsee MongoDB Atlas -pilvipalvelussa
+    //otetaan yhteys tietokantaan, connection string tulee .env -tiedostosta
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI),
      AccModule, UserModule, AuthModule],
